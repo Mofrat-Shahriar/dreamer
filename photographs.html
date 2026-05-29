@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Photography gallery by Mofrat Shahriar Shazal — landscapes, flowers, wildlife, portraits, food, and miscellaneous."/>
+  <title>Gallery — Dreamer Photography</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📷</text></svg>"/>
+  <script>(function(){var t=localStorage.getItem('dp-theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();</script>
+</head>
+<body>
+
+<div id="loader"><div class="loader-logo">Dreamer</div><div class="loader-sub">Gallery</div><div class="loader-bar-wrap"><div class="loader-bar"></div></div></div>
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+<div class="page-transition-overlay" aria-hidden="true"></div>
+
+<nav id="navbar" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">Dreamer<span>.</span><small>Photography by Mofrat Shahriar Shazal</small></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="photographs.html" class="active">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" aria-label="Toggle theme">☀</button>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a><a href="about.html">About</a>
+  <a href="photographs.html">Gallery</a><a href="contact.html">Contact</a>
+  <button class="m-toggle">☀</button>
+</div>
+
+<!-- PAGE HERO -->
+<header class="page-hero">
+  <div class="page-hero-bg-text" aria-hidden="true">Gallery</div>
+  <div>
+    <p class="section-tag reveal">The Collection</p>
+    <h1 class="section-title reveal delay-1" style="font-size:clamp(2.4rem,6vw,4.8rem);">Every Frame<br>a <em>Story</em></h1>
+  </div>
+</header>
+
+<!-- GALLERY -->
+<section class="section-padding" style="padding-top:0;" aria-label="Photo Gallery">
+
+  <!-- FILTER BUTTONS -->
+  <div class="gallery-controls" role="group" aria-label="Filter by category">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="landscape">Landscape</button>
+    <button class="filter-btn" data-filter="flower">Flowers</button>
+    <button class="filter-btn" data-filter="food">Food</button>
+    <button class="filter-btn" data-filter="wildlife">Wildlife</button>
+    <button class="filter-btn" data-filter="portrait">Portrait</button>
+    <button class="filter-btn" data-filter="misc">Miscellaneous</button>
+  </div>
+
+  <!--
+  ═══════════════════════════════════════════════════════════════
+  GALLERY GRID — HOW TO ADD A NEW PHOTO:
+  ───────────────────────────────────────────────────────────────
+  1. Copy any .photo-card block below
+  2. Set data-category to: landscape | flower | food | wildlife | portrait | misc
+  3. Set img src to your image filename (e.g. src="MyPhoto.jpeg")
+  4. Update alt text, title, preview, and full description
+  5. Save and push to GitHub Pages
+  ═══════════════════════════════════════════════════════════════
+  -->
+  <div class="gallery-grid" id="gallery-grid" role="list">
+
+    <!-- ══════════════════════════════════
+         LANDSCAPE
+    ══════════════════════════════════ -->
+
+    <article class="photo-card" data-category="landscape" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Landscape7.jpeg" alt="Full rainbow arc over Kangabali power station" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Landscape</p>
+        <h2 class="photo-card-title">Kangabali Rainbow</h2>
+        <p class="photo-card-preview">A perfect double arc spanning the storm-blue sky above Kangabali, Bangladesh — nature's triumph over infrastructure.</p>
+        <p class="photo-card-full">Shot moments after a monsoon shower passed, this photograph captures a rare full rainbow arc framing the Kangabali power station below. The contrast between the industrial foreground — pylons, cables, transformers — and the celestial spectacle above creates a tension that feels uniquely Bangladeshi: modernity and wonder coexisting in the same frame. The deep cobalt of the post-storm sky amplifies the rainbow's colour separation. This was a grab shot — phone out of pocket, seconds to compose before the light shifted.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="landscape" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Landscape6.jpeg" alt="Vivid purple and orange sunset over river with bridge silhouette" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Landscape</p>
+        <h2 class="photo-card-title">River Sunset</h2>
+        <p class="photo-card-preview">A bridge silhouette against one of Bangladesh's most dramatic sunsets — purples, oranges and golds bleeding into the river below.</p>
+        <p class="photo-card-full">Bangladesh sits at the delta of the Ganges and Brahmaputra — a land of water, sky, and light. Sunsets here can be extraordinary: wide-open horizons with no mountains to interrupt the drama. This particular evening produced a colour temperature I'd never seen before — a warm molten gold at the horizon giving way to a vivid purple that dominated the upper sky. The bridge sits perfectly in the middle distance, its silhouette uniting water and sky. Captured from a boat on the river, handheld, at the moment the last direct sunlight kissed the cloud edges.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="landscape" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Landscape5.jpeg" alt="Golden-lit forest canopy with twisted trunks" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Landscape</p>
+        <h2 class="photo-card-title">Golden Canopy</h2>
+        <p class="photo-card-preview">Low afternoon sun turns a tangle of forest trunks into burning amber. The trees look ancient, alive, conspiratorial.</p>
+        <p class="photo-card-full">I entered this forest just before golden hour, not knowing exactly what I'd find. What the late sun revealed was extraordinary — the rough bark of these twisted, intertwining trunks acting as a canvas for the warm amber light, while the foliage above caught the cooler blue of the sky. The result is a natural painting of warm and cool tones, with the complex branching pattern creating a cathedral-like canopy overhead. Shot looking upward at roughly 45°, with the wide angle capturing the full sweep of the canopy. No post-processing trickery — this is exactly what the light looked like.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="landscape" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Landscape8.jpeg" alt="Rainbow arc over Kangabali with power lines in foreground" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Landscape</p>
+        <h2 class="photo-card-title">Rainbow II</h2>
+        <p class="photo-card-preview">A second angle on the Kangabali rainbow — this time the power lines themselves become graphic elements cutting across the arc.</p>
+        <p class="photo-card-full">Taken within minutes of the Kangabali Rainbow shot, this alternate composition leans into the industrial geometry rather than trying to minimise it. The power lines and pylons now divide the frame into a grid, with the rainbow threading between them. It's a photograph about coexistence — the raw forces of nature and the built infrastructure of human progress sharing the same sky. The green paddy fields at the base ground the image in Bangladesh's agricultural identity, while the stormy blue sky above reminds you this moment was brief, borrowed, and luminous.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="landscape" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Landscape1.jpeg" alt="Lone figure silhouette on wet beach at blue hour" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Landscape</p>
+        <h2 class="photo-card-title">Blue Hour Solitude</h2>
+        <p class="photo-card-preview">A solitary figure at the sea's edge, reflected in the wet sand. Blue hour at its most cinematic and melancholy.</p>
+        <p class="photo-card-full">This is one of my most personal photographs. The figure — small against the immensity of sky and sea — is a study in human scale and solitude. Blue hour on a wet beach creates a natural mirror: the wet sand reflects the sky above, sandwiching the figure between two infinite planes. The result feels like a painting. No horizon is needed when the reflection dissolves the boundary between water and sky. I waited for the figure to stop walking and simply stand — that moment of stillness, of looking outward at something vast and unknowable, is what makes this frame work.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="landscape" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Landscape2.jpeg" alt="Colourful wooden fishing boat on river under dramatic sky" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Landscape</p>
+        <h2 class="photo-card-title">River Vessel</h2>
+        <p class="photo-card-preview">A Bangladeshi fishing boat painted in bold reds and blues under a sky that seems almost too dramatic to be real.</p>
+        <p class="photo-card-full">Bangladesh is a country of rivers — and rivers are a country of boats. This traditional wooden fishing vessel, with its hand-painted hull and cheerful red flags, sits against a sky that has been saturated by the monsoon's aftermath. The highly processed colour palette was a deliberate post-processing choice to echo the hyper-saturated way the scene felt in person — the light after a storm in Bangladesh has a quality that photographs rarely capture, and pushing the vibrance in post brought the image back to visual truth. Shot from another boat alongside, at close range.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="landscape" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Landscape3.jpeg" alt="Urban neighbourhood rooftop view with pine tree and blue sky" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Landscape</p>
+        <h2 class="photo-card-title">City &amp; Sky</h2>
+        <p class="photo-card-preview">A rooftop view over a green neighbourhood — trees, brick buildings, and a rare stretch of clear Bangladeshi sky.</p>
+        <p class="photo-card-full">Shot from a rooftop in the late morning, this image captures the unexpected greenery that softens Bangladesh's urban landscape. The Norfolk pine in the foreground gives the frame a strong vertical anchor, while the jumble of brick buildings and mango trees in the mid-ground tells the story of a city that grew organically over decades. The sky — unusually clear, with soft wispy clouds — gives the whole image a sense of breathing space. It's a quiet image, but it speaks to the character of the neighbourhood: lived-in, layered, surprisingly beautiful.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="landscape" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Landscape12.jpeg" alt="Industrial chimney against brilliant blue sky with dramatic clouds" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Landscape</p>
+        <h2 class="photo-card-title">Industry &amp; Sky</h2>
+        <p class="photo-card-preview">A power plant chimney venting white smoke beneath a sky of impossible blue and towering cumulus clouds.</p>
+        <p class="photo-card-full">There's a strange beauty to industrial landscapes when the light is right. On this particular afternoon, the cumulus clouds had built into spectacular white towers against a saturated blue sky, and the chimney's white steam blended almost seamlessly into them — as if the industry and the atmosphere were collaborating. The sunstar in the upper left was a natural lens flare at a particular angle to the sun, and I chose to keep it as it reinforces the sense of the scene's raw brightness. Minimal post-processing — the sky really was this blue. Bangladesh's tropical light can be extraordinary.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════
+         FLOWERS / MACRO
+    ══════════════════════════════════ -->
+
+    <article class="photo-card" data-category="flower" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Flower1.HEIC" alt="Two bright yellow trumpet flowers on dark asphalt" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Flower</p>
+        <h2 class="photo-card-title">Fallen Gold</h2>
+        <p class="photo-card-preview">Two yellow Allamanda blooms fallen on dark asphalt — a still life nobody arranged, discovered underfoot.</p>
+        <p class="photo-card-full">This photograph happened by accident. I nearly walked over these two fallen blooms on a wet road surface, and something made me stop. The contrast is everything: the saturated yellow of the Allamanda petals against the dark, grainy asphalt creates a visual intensity that a garden shot could never achieve. The overhead perspective flattens the image into something almost graphic — two trumpet shapes, joined at the stem, forming a symmetrical composition that looks designed but was entirely found. The tiny water droplets on the petals suggest the rain had just passed. A reminder to look down sometimes.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="flower" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Flower2.HEIC" alt="White Catharanthus flower with yellow centre among golden leaves, titled Bondhu" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Flower</p>
+        <h2 class="photo-card-title">Bondhu</h2>
+        <p class="photo-card-preview">A white Catharanthus flower glowing against a backdrop of golden and green leaves. The word "Bondhu" means friend in Bengali.</p>
+        <p class="photo-card-full">"Bondhu" — friend — is the title I gave this image because of how the flower seems to lean forward, open and welcoming. The Catharanthus roseus, known locally as "nayan tara," is one of Bangladesh's most common garden flowers. But the arrangement here is anything but ordinary: the white petals and yellow eye glow against a painterly background of golden-yellow and deep green leaves in natural bokeh. Shot from directly above with the camera close to the flower, this overhead perspective reveals the five-petal symmetry of the bloom in full. The soft light of an overcast morning gave the petals their luminous quality.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="flower" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Flower3.HEIC" alt="Vibrant red and yellow tropical turmeric flower" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Flower</p>
+        <h2 class="photo-card-title">Tropical Flame</h2>
+        <p class="photo-card-preview">A turmeric flower in full bloom — crimson bracts flaring open above golden yellow petals, set against a green field and blue sky.</p>
+        <p class="photo-card-full">The Curcuma longa — turmeric — produces one of Bangladesh's most spectacular wildflowers: a tiered inflorescence of deep crimson bracts opening to reveal golden yellow true flowers at each stage of bloom. I found this specimen growing in a field margin at mid-morning, when the light was still soft enough to preserve the colour separation between the crimson and gold without blowing out the highlights. The blurred green field and blue sky behind create a clean, simple background that lets the extraordinary architecture of the flower take centre stage. Shot at the closest focus distance, with the camera held at flower height.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="flower" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Flower4.HEIC" alt="Delicate flower macro" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Flower</p>
+        <h2 class="photo-card-title">Petal Study I</h2>
+        <p class="photo-card-preview">An intimate macro study — the architecture of petals, the geometry of a bloom examined in close, patient detail.</p>
+        <p class="photo-card-full">Macro flower photography rewards patience and proximity. This close study captures the intricate surface detail of the petals — the subtle texture, the gradients of colour that shift across a single petal surface, the delicate veining that becomes visible only when you get this close. Shot in diffused morning light to avoid harsh shadows that would obscure the fine detail. The shallow depth of field, achieved at the camera's minimum focus distance, renders the background as a smooth wash of colour that frames the subject without competing with it. These details exist for every flower — most people just don't stop long enough to see them.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="flower" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Flower5.jpeg" alt="Flower in natural light" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Flower</p>
+        <h2 class="photo-card-title">Petal Study II</h2>
+        <p class="photo-card-preview">Natural light, natural beauty. A flower photographed with the simplest possible approach — presence, patience, and proximity.</p>
+        <p class="photo-card-full">Sometimes the best flower photography asks nothing of the photographer except to stop, get close, and wait for the light to be right. This image embodies that philosophy — no special equipment, no complex setup, just a flower, available light, and full attention. The colours here speak for themselves: the warmth of the petals, the cool of the background greenery, the catchlights that suggest a softly overcast sky above. There is a stillness to this image that I find meditative. It asks you to slow down and simply look.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="flower" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Flower6.jpeg" alt="Delicate flower close-up" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Flower</p>
+        <h2 class="photo-card-title">Petal Study III</h2>
+        <p class="photo-card-preview">The quiet drama of a single bloom — colour, form, and light distilled into one frame.</p>
+        <p class="photo-card-full">Every flower is a small drama: the tension between bud and bloom, between colour and light, between the brief life of a petal and the eternal geometry of its form. This study explores that drama in miniature. Shot at close range with available light, the image prioritises colour fidelity and the natural softness of the petals over technical complexity. What matters here is the quality of observation — the willingness to be still long enough for the flower to reveal itself fully.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="flower" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Flower7.HEIC" alt="Flower macro in natural garden setting" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Flower</p>
+        <h2 class="photo-card-title">Garden Secret</h2>
+        <p class="photo-card-preview">A bloom discovered in a garden corner — hidden from the main path, flowering quietly for its own pleasure.</p>
+        <p class="photo-card-full">Gardens reward explorers. This flower was found tucked into a shaded corner of a garden I'd visited many times before, in a spot I'd never looked carefully at. The filtered light in this corner gave the petals an extraordinary luminosity — soft, diffused, directional — that open sunlight would have destroyed. The background, rendered smooth and dark by the shade behind, acts as a natural backdrop. I find that the best flower photographs are discovered rather than staged — they're found in the act of genuinely paying attention to the world around you.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="flower" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Flower8.HEIC" alt="Flower macro detail" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Flower</p>
+        <h2 class="photo-card-title">Petal Study IV</h2>
+        <p class="photo-card-preview">Getting closer still — the surface of a petal becomes a landscape at macro distances.</p>
+        <p class="photo-card-full">At true macro distances, a flower petal ceases to be a petal and becomes a landscape in its own right — ridges, valleys, translucent membranes lit from behind, micro-textures that the naked eye never registers. This image explores that intimate scale: the camera pressed to its minimum focus distance, the light coming from a shallow angle to emphasise surface texture. The resulting photograph has an almost abstract quality — you recognise it as a flower, but you see it as something entirely unfamiliar. That defamiliarisation is one of the great gifts of macro photography.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="flower" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Flower9.HEIC" alt="Flower in soft natural light" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Flower</p>
+        <h2 class="photo-card-title">Soft Bloom</h2>
+        <p class="photo-card-preview">Soft, diffused light on a fresh bloom — the photographic equivalent of a deep, slow breath.</p>
+        <p class="photo-card-full">Overcast skies are a flower photographer's best friend. The diffuse, shadowless light wraps around every curve and petal edge, revealing colour and form without the harsh contrasts that direct sunlight introduces. This image was shot on exactly that kind of soft, grey morning — the kind of day when the world feels still and contemplative. The flower itself seems to share that mood: open, unhurried, perfectly at rest. I kept the processing light, preserving the gentle, muted quality that the natural light gave the scene.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="flower" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Flower10.jpeg" alt="Flower in natural outdoor setting" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Flower</p>
+        <h2 class="photo-card-title">Petal Study V</h2>
+        <p class="photo-card-preview">The final study in the petal series — colour, form, and the particular quality of tropical Bangladeshi light.</p>
+        <p class="photo-card-full">The tropics have a quality of light unlike anywhere else — intense, saturated, and constantly shifting. Flowers here tend to be bold in their colours, as if competing with the brightness of their environment. This final study in the petal series captures that relationship between flower and light: the bloom is inseparable from the particular illumination that defines it. Shot at the peak of the morning, before the sun climbed high enough to create harsh shadows, with the camera positioned to maximise the colour contrast between the petals and their background. Bangladesh's flora is extraordinary, and I'm grateful to document even a small part of it.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════
+         FOOD
+    ══════════════════════════════════ -->
+
+    <article class="photo-card" data-category="food" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Food1.HEIC" alt="Bangladeshi food photography" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Food</p>
+        <h2 class="photo-card-title">Table Stories I</h2>
+        <p class="photo-card-preview">Food is memory, culture, and love on a plate. This first food study explores the visual language of the Bangladeshi table.</p>
+        <p class="photo-card-full">Photographing food is an act of cultural documentation as much as an aesthetic exercise. What's on a table tells you everything about where you are and who you're with — the spices, the colours, the textures, the ritual of preparation and presentation. This image from my food series captures a moment at the Bangladeshi table: the warmth of the food, the context of the setting, and the particular light of an interior space softened by a nearby window. Shot from a 3/4 overhead angle to show the depth and layering of the scene while preserving a sense of the context around the meal.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="food" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Food2.HEIC" alt="Food photography close-up detail" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Food</p>
+        <h2 class="photo-card-title">Table Stories II</h2>
+        <p class="photo-card-preview">Texture, colour, and the close-up detail that makes food photography as intimate as portraiture.</p>
+        <p class="photo-card-full">Getting close to food reveals the same hidden worlds that macro flower photography does — the surface textures, the play of light across oils and sauces, the architectural detail of how ingredients are arranged. This close study leans into that intimacy: the camera at table level, the light coming from the side to emphasise texture, the shallow depth of field blurring the background into a warm wash that suggests the broader context of the meal without competing for attention. Food photography at this scale is about making the viewer feel the texture and temperature of the image — to almost taste it through their eyes.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="food" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="Food3.HEIC" alt="Bangladeshi food overhead composition" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Food</p>
+        <h2 class="photo-card-title">Table Stories III</h2>
+        <p class="photo-card-preview">An overhead composition — the flat-lay approach to food photography, where arrangement becomes the language.</p>
+        <p class="photo-card-full">The overhead flat-lay has become a dominant format in food photography for good reason: it allows the photographer to treat the table as a canvas and the food as shapes, colours, and textures arranged in conscious composition. This third study takes that approach, balancing the elements of the scene — dishes, garnishes, surfaces, gaps — as a painter would balance a still life. The challenge of the flat-lay is making it feel natural rather than arranged; the best flat-lays look like someone just happened to have this food on a beautiful table at the perfect moment. Whether this image achieves that is for you to decide.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════
+         WILDLIFE
+    ══════════════════════════════════ -->
+
+    <article class="photo-card" data-category="wildlife" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="wildlife1.HEIC" alt="Wildlife of Bangladesh" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Wildlife</p>
+        <h2 class="photo-card-title">Wild Encounter I</h2>
+        <p class="photo-card-preview">Patience rewarded. A wildlife subject caught at the perfect moment — stillness meeting stillness across the frame.</p>
+        <p class="photo-card-full">Wildlife photography is fundamentally about patience — the willingness to wait, to be still, to let the wild world forget you're there and resume its normal behaviour. This image was the result of exactly that kind of patient observation. I'd identified the subject's likely location in advance, positioned myself downwind and at a distance that wouldn't trigger flight behaviour, and simply waited. The decisive moment — when the animal paused and offered this composition — lasted only a few seconds. But the preparation made those seconds possible. Bangladesh's biodiversity is remarkable, and documenting even a fraction of it is a privilege.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="wildlife" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="wildlife2.HEIC" alt="Wildlife close-up portrait" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Wildlife</p>
+        <h2 class="photo-card-title">Wild Encounter II</h2>
+        <p class="photo-card-preview">A close encounter — the subject filling the frame, eyes sharp, the world around it dissolved into soft background tones.</p>
+        <p class="photo-card-full">When a wildlife subject allows you to get this close, the photograph shifts from documentation to portraiture. The subject is no longer a species in a landscape — it's an individual with a specific gaze, a particular moment of alertness or calm. At this magnification, the eyes become everything: sharp, reflective, alive. The shallow depth of field renders the surrounding environment as pure colour and texture, removing all distraction and placing the viewer in direct contact with the animal. These encounters are rare and brief. The camera disciplines you to be ready for them.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="wildlife" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="wildlife3.HEIC" alt="Wildlife in natural habitat Bangladesh" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Wildlife</p>
+        <h2 class="photo-card-title">Wild Encounter III</h2>
+        <p class="photo-card-preview">Subject in habitat — showing the animal in the context of the world it lives in, not isolated from it.</p>
+        <p class="photo-card-full">Sometimes the most honest wildlife photograph is the one that shows the subject in its world rather than extracting it from context. This image takes that environmental approach: the animal is present, clearly defined, but surrounded by the textures and colours of its natural habitat. The relationship between subject and setting is the story here — what the animal lives inside, how it fits into this particular piece of the world. Bangladesh's natural environments, despite significant pressure from development, still contain remarkable pockets of wild habitat. Being present in them, quietly and respectfully, remains one of the most rewarding experiences I know.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════
+         PORTRAIT
+    ══════════════════════════════════ -->
+
+    <article class="photo-card" data-category="portrait" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="portrait1.HEIC" alt="Portrait study" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Portrait</p>
+        <h2 class="photo-card-title">Study I</h2>
+        <p class="photo-card-preview">A portrait study — the quiet conversation between photographer and subject, between light and face.</p>
+        <p class="photo-card-full">Portrait photography is a negotiation — between the photographer's vision and the subject's presence, between revealing and concealing, between the objective record and the emotional truth. This study explores those tensions. The light here is the key element: directional, soft enough to be flattering but defined enough to sculpt the features. The subject's expression carries a weight that the technical elements exist only to serve. A portrait succeeds when it makes you want to know the person — when it suggests a story larger than the frame itself.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="portrait" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="portrait2.HEIC" alt="Portrait in natural light" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Portrait</p>
+        <h2 class="photo-card-title">Study II</h2>
+        <p class="photo-card-preview">Natural light portrait — the face as landscape, read with the same attention given to the sky or the sea.</p>
+        <p class="photo-card-full">I approach portrait photography with the same mindset I bring to landscape work: looking for the quality of light first, the composition second, and then waiting for the right moment of expression. Natural light — especially the soft, diffused light of an overcast sky or the warm directional light near a window — reveals the face with a gentleness that artificial lighting rarely matches. This portrait was made in exactly that kind of natural light, allowing the subject's features and expression to emerge organically rather than being sculpted by studio equipment.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="portrait" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="portrait3.jpeg" alt="Portrait outdoors" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Portrait</p>
+        <h2 class="photo-card-title">Study III</h2>
+        <p class="photo-card-preview">An outdoor portrait — the subject in their environment, the world behind them as context and frame.</p>
+        <p class="photo-card-full">Environmental portraiture asks the background to work as hard as the subject. Here, the outdoor setting isn't merely a backdrop — it's context, atmosphere, and part of the subject's visual story. The light outdoors demanded a specific time of day: soft enough to be flattering, directional enough to give the face depth. Bangladesh's outdoor light, particularly in the cooler months, has a quality that I find endlessly interesting for portrait work — it's warm but not harsh, rich but not overwhelming. This portrait tries to honour that quality of light as much as it honours the subject within it.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="portrait" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="portrait4.jpeg" alt="Portrait study with natural background" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Portrait</p>
+        <h2 class="photo-card-title">Study IV</h2>
+        <p class="photo-card-preview">A candid-feeling portrait — the subject caught in a moment of natural ease, the camera forgotten.</p>
+        <p class="photo-card-full">The best portraits feel unstaged even when they're not. Getting a subject to forget the camera requires time, conversation, patience — letting the initial self-consciousness dissolve and the natural person emerge. This portrait was made in that window: after enough time had passed that the subject stopped performing for the lens and simply existed within the frame. That ease is visible in the posture, the expression, the quality of attention. Technical decisions — focal length, aperture, exposure — all serve this single goal: preserving a moment of genuine human presence.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="portrait" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="portrait5.jpeg" alt="Dramatic portrait with strong light" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Portrait</p>
+        <h2 class="photo-card-title">Study V</h2>
+        <p class="photo-card-preview">Strong light, strong character. A portrait where the light is as much a subject as the person it falls on.</p>
+        <p class="photo-card-full">Sometimes the light arrives and the portrait makes itself. This image was conceived entirely in response to a quality of light that appeared unexpectedly — strong, directional, and arriving at an angle that sculpted the subject's features in a way that felt almost theatrical. When that happens, the photographer's job is simply to recognise it, respond quickly, and not overthink the rest. The exposure, the framing, the moment of expression — everything had to be decided in seconds. The result is a portrait defined by light: where it falls, where it doesn't, and what that contrast reveals about the face it touches.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <!-- ══════════════════════════════════
+         MISCELLANEOUS
+    ══════════════════════════════════ -->
+
+    <article class="photo-card" data-category="misc" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="miscellanceous1.HEIC" alt="Dreamer — man sitting on boat bow facing the river and sky" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Miscellaneous</p>
+        <h2 class="photo-card-title">Dreamer</h2>
+        <p class="photo-card-preview">A man sits on the prow of a boat, back to the camera, facing the river and an enormous blue sky. The word above him says everything: Dreamer.</p>
+        <p class="photo-card-full">This is the image that names this portfolio. A figure — small, still, contemplative — sits at the very front of a wooden boat, facing outward toward a vast, cloud-heavy sky that fills three-quarters of the frame. The boat's ropes, the worn blue wood, the reclining posture — all speak to a particular kind of stillness: not emptiness, but full presence. The word "DREAMER" was added as a title, but it describes something real about the image. We all contain this figure — the part of us that sits at the prow of our own life and looks outward at the immensity of what might be possible.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="misc" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="miscellanceous3.HEIC" alt="People seen through old weathered window glass — teal tones" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Miscellaneous</p>
+        <h2 class="photo-card-title">Through Glass</h2>
+        <p class="photo-card-preview">People visible through the four panes of an old, weathered window — the glass distorting and colouring the world beyond into something dreamlike.</p>
+        <p class="photo-card-full">Old glass changes the world behind it. This window — its panes clouded with age, salt, and rain — tints the scene beyond into deep teals and aquas, transforming an ordinary view of trees and people into something that looks like an underwater dreamscape. The four-pane grid divides the scene into quadrants: upper panes show a canopy of greenery, lower left shows a group of people, lower right shows the utilitarian objects of daily life. The structural frame of the window becomes a compositional device — a grid within the photograph that organises the visual information. Shot from inside looking out, with the camera pressed close to the glass.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <article class="photo-card" data-category="misc" role="listitem">
+      <div class="photo-card-img" data-cursor-expand>
+        <img src="miscellanceous5.jpeg" alt="Miscellaneous scene" loading="lazy"/>
+        <div class="photo-overlay" aria-hidden="true"><div class="overlay-zoom">⊕</div></div>
+      </div>
+      <div class="photo-card-body">
+        <p class="photo-card-category">Miscellaneous</p>
+        <h2 class="photo-card-title">Unexpected Frame</h2>
+        <p class="photo-card-preview">The photographs that refuse categories are often the most honest. A moment captured because it was real, not because it fit a brief.</p>
+        <p class="photo-card-full">The miscellaneous category is my favourite — it's where the most spontaneous, unplanned images live. These are photographs taken because something caught my eye, because the light did something interesting, because I wanted to remember this particular moment or texture or colour. They don't fit neatly into landscape or portrait or food or flower — they're just photographs of life, taken by someone paying attention. This image belongs in that spirit: uncategorised, unplanned, and all the more honest for it.</p>
+        <button class="read-more-btn" aria-expanded="false">Read More</button>
+      </div>
+    </article>
+
+    <!--
+    ════════════════════════════════════════════════════════
+    ➜ ADD NEW PHOTOS ABOVE THIS LINE
+       Copy any photo-card block, change data-category,
+       update src, alt, title, and description text.
+    ════════════════════════════════════════════════════════
+    -->
+
+  </div><!-- /gallery-grid -->
+</section>
+
+<!-- LIGHTBOX -->
+<div id="lightbox" role="dialog" aria-modal="true" aria-label="Image lightbox">
+  <div class="lightbox-img-wrap">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+    <img id="lightbox-img" src="" alt=""/>
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+</div>
+
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>Dreamer<span>.</span></h3>
+      <p>A personal photography portfolio by Mofrat Shahriar Shazal — capturing the beauty of light, nature, and life in Bangladesh and beyond.</p>
+      <div class="social-links" style="margin-top:26px;">
+        <a href="#" class="social-link" aria-label="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="Facebook">f</a>
+        <a href="#" class="social-link" aria-label="500px">⭕</a>
+        <a href="#" class="social-link" aria-label="YouTube">▶</a>
+        <a href="#" class="social-link" aria-label="Pinterest">P</a>
+      </div>
+    </div>
+    <nav class="footer-nav"><h4>Navigation</h4><a href="index.html">Home</a><a href="about.html">About</a><a href="photographs.html">Gallery</a><a href="contact.html">Contact</a></nav>
+    <nav class="footer-nav"><h4>Gallery</h4><a href="photographs.html">Landscapes</a><a href="photographs.html">Flowers</a><a href="photographs.html">Wildlife</a><a href="photographs.html">Portraits</a><a href="photographs.html">Food</a></nav>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2025 Mofrat Shahriar Shazal. All rights reserved.</p>
+    <p class="footer-copy" style="font-style:italic;font-family:'Cormorant Garamond',serif;">Dreamer Photography</p>
+  </div>
+</footer>
+
+<button id="back-top" aria-label="Back to top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

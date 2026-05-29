@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <meta name="description" content="Dreamer Photography — a cinematic portfolio by Mofrat Shahriar Shazal capturing landscapes, flowers, wildlife, portraits, food, and life in Bangladesh."/>
+  <title>Dreamer Photography — Mofrat Shahriar Shazal</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📷</text></svg>"/>
+  <script>
+    // Apply saved theme before paint to prevent flash
+    (function(){var t=localStorage.getItem('dp-theme')||'dark';document.documentElement.setAttribute('data-theme',t)})();
+  </script>
+</head>
+<body>
+
+<div id="loader" role="status">
+  <div class="loader-logo">Dreamer</div>
+  <div class="loader-sub">Photography</div>
+  <div class="loader-bar-wrap"><div class="loader-bar"></div></div>
+</div>
+
+<div id="cursor-dot" aria-hidden="true"></div>
+<div id="cursor-ring" aria-hidden="true"></div>
+<div class="page-transition-overlay" aria-hidden="true"></div>
+
+<!-- NAVBAR -->
+<nav id="navbar" aria-label="Main navigation">
+  <a href="index.html" class="nav-logo">
+    Dreamer<span>.</span>
+    <small>Photography by Mofrat Shahriar Shazal</small>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html" class="active">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="photographs.html">Gallery</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+  <div class="nav-right">
+    <button class="theme-toggle" aria-label="Toggle theme">☀</button>
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<div class="nav-mobile" id="nav-mobile">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="photographs.html">Gallery</a>
+  <a href="contact.html">Contact</a>
+  <button class="m-toggle">☀</button>
+</div>
+
+<!-- HERO -->
+<section class="hero" aria-label="Hero">
+  <div class="particles" aria-hidden="true"></div>
+  <!--
+    HERO SLIDESHOW — using your landscape photos.
+    To change slides: update the background-image paths below.
+    Images should be in the same folder as index.html (or an /images/ subfolder).
+  -->
+  <div class="hero-slideshow" aria-hidden="true">
+    <div class="hero-slide active" style="background-image:url('Landscape6.jpeg')"></div>
+    <div class="hero-slide" style="background-image:url('Landscape5.jpeg')"></div>
+    <div class="hero-slide" style="background-image:url('Landscape11.jpeg')"></div>
+    <div class="hero-slide" style="background-image:url('Landscape12.jpeg')"></div>
+  </div>
+  <div class="hero-overlay" aria-hidden="true"></div>
+
+  <!-- Profile card — uses your profile.jpeg -->
+  <div class="hero-profile glass-card">
+    <img src="profile.jpeg" alt="Mofrat Shahriar Shazal" class="hero-avatar"/>
+    <div>
+      <div class="hero-profile-name">Mofrat Shahriar Shazal</div>
+      <div class="hero-profile-title">Photographer &amp; Visual Dreamer</div>
+    </div>
+  </div>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Dreamer Photography</p>
+    <h1 class="hero-title">Light, Silence<br>&amp; <em>Dreams</em></h1>
+    <p class="hero-subtitle"><span id="typed-text"></span></p>
+    <div class="hero-cta">
+      <a href="photographs.html" class="btn btn-gold">Explore Gallery</a>
+      <a href="about.html" class="btn-arrow">My Story</a>
+    </div>
+  </div>
+
+  <div class="hero-dots" aria-hidden="true">
+    <div class="hero-dot active"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+    <div class="hero-dot"></div>
+  </div>
+  <div class="scroll-indicator" aria-hidden="true">
+    <span>Scroll</span><div class="scroll-line"></div>
+  </div>
+</section>
+
+<!-- FEATURED GALLERY -->
+<section class="section-padding" aria-labelledby="featured-h">
+  <div class="reveal">
+    <p class="section-tag">Selected Works</p>
+    <h2 class="section-title" id="featured-h">Featured <em>Photographs</em></h2>
+    <p class="section-subtitle">A curated selection from Bangladesh and beyond — landscapes, blooms, and quiet moments.</p>
+  </div>
+
+  <div class="featured-grid reveal delay-2">
+    <!-- Large item (spans 2 rows) -->
+    <div class="featured-item">
+      <img src="Landscape6.jpeg" alt="Sunset over the river — Kangabali" loading="lazy"/>
+      <div class="featured-caption"><h4>River Sunset</h4><span>Landscape</span></div>
+    </div>
+    <div class="featured-item">
+      <img src="Flower5.jpeg" alt="Vibrant flower" loading="lazy"/>
+      <div class="featured-caption"><h4>Bloom</h4><span>Macro / Flower</span></div>
+    </div>
+    <div class="featured-item">
+      <img src="Landscape5.jpeg" alt="Forest canopy at golden hour" loading="lazy"/>
+      <div class="featured-caption"><h4>Golden Canopy</h4><span>Landscape</span></div>
+    </div>
+    <div class="featured-item">
+      <img src="Landscape7.jpeg" alt="Rainbow over Kangabali" loading="lazy"/>
+      <div class="featured-caption"><h4>Rainbow</h4><span>Sky</span></div>
+    </div>
+    <div class="featured-item">
+      <img src="Flower6.jpeg" alt="Delicate flower macro" loading="lazy"/>
+      <div class="featured-caption"><h4>Delicate</h4><span>Flower</span></div>
+    </div>
+  </div>
+
+  <div class="text-center reveal delay-3" style="margin-top:52px;text-align:center;">
+    <a href="photographs.html" class="btn btn-outline">View Full Gallery</a>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats-section" aria-label="Statistics">
+  <div class="stats-grid">
+    <div class="stat-item reveal"><div class="stat-number" data-count="6" data-suffix="+">0</div><p class="stat-label">Years Shooting</p></div>
+    <div class="stat-item reveal delay-1"><div class="stat-number" data-count="38" data-suffix="+">0</div><p class="stat-label">Photos in Portfolio</p></div>
+    <div class="stat-item reveal delay-2"><div class="stat-number" data-count="6" data-suffix="">0</div><p class="stat-label">Genres Explored</p></div>
+    <div class="stat-item reveal delay-3"><div class="stat-number" data-count="100" data-suffix="%">0</div><p class="stat-label">Passion Driven</p></div>
+  </div>
+</section>
+
+<!-- PARALLAX QUOTE -->
+<section class="parallax-section" aria-label="Quote">
+  <div class="parallax-bg" style="background-image:url('Landscape8.jpeg')"></div>
+  <div class="parallax-overlay" aria-hidden="true"></div>
+  <div class="parallax-content reveal">
+    <blockquote>"A photograph is a secret about a secret.<br>The more it tells you, the less you know."</blockquote>
+    <cite>— Diane Arbus</cite>
+  </div>
+</section>
+
+<!-- ABOUT TEASER -->
+<section class="section-padding" aria-labelledby="about-t-h">
+  <div class="about-intro">
+    <div style="position:relative;" class="reveal-left">
+      <div class="about-image-frame">
+        <img src="profile.jpeg" alt="Mofrat Shahriar Shazal, Photographer"/>
+      </div>
+      <div class="about-image-accent"></div>
+    </div>
+    <div class="reveal-right">
+      <p class="section-tag">About the Photographer</p>
+      <h2 class="section-title" id="about-t-h">Hello, I'm<br><em>Mofrat Shahriar</em></h2>
+      <div class="divider"></div>
+      <p>Based in Bangladesh, I'm a passionate self-taught photographer drawn to the quiet beauty hiding in plain sight — the arc of a rainbow over a power station, a yellow flower resting on dark asphalt, a silhouette standing at the edge of an infinite sea.</p>
+      <p>My lens explores landscapes, blooms, wildlife, food, and the faces and places of everyday life. Every photograph is a small act of attention — a way of saying: <em>this moment mattered.</em></p>
+      <div style="margin-top:32px;display:flex;gap:14px;flex-wrap:wrap;">
+        <a href="about.html" class="btn btn-gold">Read My Story</a>
+        <a href="photographs.html" class="btn btn-outline">View Gallery</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <h3>Dreamer<span>.</span></h3>
+      <p>A personal photography portfolio by Mofrat Shahriar Shazal — capturing the beauty of light, nature, and life in Bangladesh and beyond.</p>
+      <div class="social-links" style="margin-top:26px;">
+        <a href="#" class="social-link" aria-label="Instagram" title="Instagram">📸</a>
+        <a href="#" class="social-link" aria-label="Facebook" title="Facebook">f</a>
+        <a href="#" class="social-link" aria-label="500px" title="500px">⭕</a>
+        <a href="#" class="social-link" aria-label="YouTube" title="YouTube">▶</a>
+        <a href="#" class="social-link" aria-label="Pinterest" title="Pinterest">P</a>
+      </div>
+    </div>
+    <nav class="footer-nav" aria-label="Footer nav">
+      <h4>Navigation</h4>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="photographs.html">Gallery</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <nav class="footer-nav" aria-label="Gallery nav">
+      <h4>Gallery</h4>
+      <a href="photographs.html">Landscapes</a>
+      <a href="photographs.html">Flowers</a>
+      <a href="photographs.html">Wildlife</a>
+      <a href="photographs.html">Portraits</a>
+      <a href="photographs.html">Food</a>
+    </nav>
+  </div>
+  <div class="footer-bottom">
+    <p class="footer-copy">&copy; 2025 Mofrat Shahriar Shazal. All rights reserved.</p>
+    <p class="footer-copy" style="font-style:italic;font-family:'Cormorant Garamond',serif;">Dreamer Photography</p>
+  </div>
+</footer>
+
+<button id="back-top" aria-label="Back to top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
